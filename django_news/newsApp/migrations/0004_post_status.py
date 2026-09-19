@@ -1,0 +1,23 @@
+"""
+Developed by MASA
+All Rights Reserved.
+"""
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ("newsApp", "0003_post_category"),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name="post",
+            name="status",
+            field=models.CharField(
+                choices=[("1", "Published"), ("2", "Unpublished")], default=2, max_length=2
+            ),
+        ),
+    ]
